@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+
+    <script src="rotation.js"></script>
+
+  </head>
+
+  <body>
+    <a-scene background="color:#026F90">
+
+      <a-entity id="look" look-controls camera position="0 2 20"></a-entity>
+
+      <!--Asset Management-->
+      <a-assets>        
+      <a-asset-item id="island" src="./PRO-C153-Teacher-Boilerplate-main/assets/models/island/scene.gltf"></a-asset-item>
+      <a-asset-item id="diver" src="./PRO-C153-Teacher-Boilerplate-main/assets/models/diver/scene.gltf"></a-asset-item>
+        
+      </a-assets>
+
+      <!-- Terrain  -->
+     <a-entity id="island" gltf-model="#island" position="0 0 0" scale="1 1 1" animation="propety:position;to:0 0 1000;easing:linear;loop:true;dur:150000" terrain-rotation-reader fish coin></a-entity>
+     <a-entity id="diver" gltf-model="#diver" position="0 0 15" scale="1 1 1" rotation="0 90 0" divero fishes></a-entity>
+
+      
+    </a-scene>
+  </body>
+</html>
